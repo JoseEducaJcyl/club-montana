@@ -1,0 +1,76 @@
+.root {
+    -fx-font-family: "Segoe UI", system-ui, sans-serif;
+    -fx-font-size: 13px;
+    -fx-base: #ececec;
+    -fx-background: #f0f0f0;
+}
+
+.etiqueta {
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-text-fill: #333333;
+}
+
+.boton-principal {
+    -fx-background-color: #07516f, #0a6a96;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 3, 2;
+    -fx-text-fill: white;
+}
+
+.boton-principal:hover {
+    -fx-background-color: #07516f, #0c7aad;
+}
+
+.estado {
+    -fx-text-fill: #1d6a2c;
+    -fx-font-size: 12px;
+}
+
+.campo-solo-lectura {
+    -fx-background-color: #e6e6e6;
+}
+/* Base común de los botones de colores */
+.boton-verde, .boton-naranja, .boton-rojo {
+    -fx-text-fill: white;
+    -fx-background-radius: 3;
+    -fx-padding: 6 14 6 14;
+    -fx-cursor: hand;
+}
+
+/* Insertar Nuevo */
+.boton-verde { -fx-background-color: #2e7d32; }
+.boton-verde:hover { -fx-background-color: #388e3c; }
+.boton-verde:pressed { -fx-background-color: #1b5e20; }
+
+/* Modificar Seleccionado */
+.boton-naranja { -fx-background-color: #fb8c00; }
+.boton-naranja:hover { -fx-background-color: #ffa000; }
+.boton-naranja:pressed { -fx-background-color: #e65100; }
+
+/* Eliminar Seleccionado */
+.boton-rojo { -fx-background-color: #c62828; }
+.boton-rojo:hover { -fx-background-color: #d32f2f; }
+.boton-rojo:pressed { -fx-background-color: #b71c1c; }
+
+/* Limpiar: gris claro con borde fino */
+.boton-gris {
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: #bdbdbd;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-text-fill: #333333;
+    -fx-padding: 6 14 6 14;
+    -fx-cursor: hand;
+}
+.boton-gris:hover { -fx-background-color: #d5d5d5; }
+.boton-gris:pressed { -fx-background-color: #c8c8c8; }
+.boton-azul {
+    -fx-background-color: #1565c0;
+    -fx-text-fill: white;
+    -fx-background-radius: 3;
+    -fx-padding: 6 14 6 14;
+    -fx-cursor: hand;
+}
+.boton-azul:hover { -fx-background-color: #1976d2; }
+.boton-azul:pressed { -fx-background-color: #0d47a1; }
