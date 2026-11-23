@@ -60,4 +60,9 @@ public class Participante {
     public void setRuta(Ruta ruta) {
         this.ruta = ruta;
     }
+
+    @Override
+    public String toString() {
+        return  nombre;
+    }
 }

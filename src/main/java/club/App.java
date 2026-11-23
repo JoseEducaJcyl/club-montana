@@ -33,14 +33,9 @@ public class App extends Application {
 
     @Override
     public void stop() {
-        //Conexion.cerrar();
+        // Cerramos Hibernate al salir
+        util.HibernateUtil.shutdown();
     }
-
-    /**
-     * Cambia el contenido de la ventana actual por otro formulario y devuelve su controlador,
-     * para poder pasarle datos (por ejemplo, la ruta seleccionada).
-     */
-
 
     public static void main(String[] args) {
         launch(args);

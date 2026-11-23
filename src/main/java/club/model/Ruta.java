@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 public class Ruta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idruta")
     private Integer id;
     @Column
     private String nombreruta;
@@ -16,7 +17,7 @@ public class Ruta {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idsocio")  // solo para mostrar (viene del JOIN con socio)
-    private Ruta ruta;
+    private Socio guia;
 
 
     public Ruta() {
@@ -52,11 +53,21 @@ public class Ruta {
         this.dificultad = dificultad;
     }
 
-    public Ruta getRuta() {
-        return ruta;
+    public Socio getGuia() {
+        return guia;
     }
 
-    public void setRuta(Ruta ruta) {
-        this.ruta = ruta;
+    public void setGuia(Socio guia) {
+        this.guia = guia;
+    }
+
+    @Override
+    public String toString() {
+        return "Ruta{" +
+                "id=" + id +
+                ", nombreruta='" + nombreruta + '\'' +
+                ", dificultad=" + dificultad +
+                ", guia=" + guia +
+                '}';
     }
 }

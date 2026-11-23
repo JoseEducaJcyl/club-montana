@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="540.0" prefWidth="760.0" spacing="8.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"  stylesheets="@../css/estilo.css">
+<VBox prefHeight="540.0" prefWidth="760.0" fx:controller="club.controller.RutaController" spacing="8.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../css/estilo.css">
    <padding>
       <Insets bottom="8.0" left="16.0" right="16.0" top="16.0" />
    </padding>
@@ -48,12 +48,12 @@
                   </HBox>
                   <HBox spacing="8.0">
                      <children>
-                        <Button text="Insertar Nuevo"       styleClass="boton-verde"   />
-                        <Button text="Modificar Seleccionado" styleClass="boton-naranja" />
-                        <Button text="Eliminar Seleccionado"  styleClass="boton-rojo"    />
-                        <Button text="Limpiar"              styleClass="boton-gris"    />
+                        <Button text="Insertar Nuevo" onAction="#insertarNuevo" styleClass="boton-verde"   />
+                        <Button text="Modificar Seleccionado" onAction="#modificarSeleccionado" styleClass="boton-naranja" />
+                        <Button text="Eliminar Seleccionado" onAction="#eliminarSeleccionado" styleClass="boton-rojo"    />
+                        <Button text="Limpiar" onAction="#limpiar" styleClass="boton-gris"    />
                         <Region HBox.hgrow="ALWAYS" />
-                        <Button styleClass="boton-azul"  text="Participantes" />
+                        <Button styleClass="boton-azul" onAction="#irAParticipantes" text="Participantes" />
                      </children>
                   </HBox>
                   <TableView fx:id="tblRutas" VBox.vgrow="ALWAYS">
